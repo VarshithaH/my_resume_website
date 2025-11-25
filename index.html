@@ -24,13 +24,21 @@
 
     <main class="wrap">
       <!-- Hero banner using your pastel gradient -->
-      <section class="intro hero-home">
-        <h1>Hi, I'm <span class="brand-accent">Varshitha</span></h1>
-        <p>Frontend-focused developer who loves clean UI and simple, responsive web pages.</p>
-        <div class="actions">
-          <a class="btn" href="resume.html">View Resume</a>
-          <a class="btn outline" href="index.html">See Bio-Data</a>
+      <!-- ADDED: hero-split (text + photo side-by-side) -->
+      <section class="intro hero-home hero-split">
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="brand-accent">Varshitha</span></h1>
+          <p>Frontend-focused developer who loves clean UI and simple, responsive web pages.</p>
+          <div class="actions">
+            <a class="btn" href="resume.html">View Resume</a>
+            <a class="btn outline" href="biodata.html">See Bio-Data</a>
+          </div>
         </div>
+
+        <!-- Your photo -->
+        <figure class="hero-figure">
+          <img class="hero-photo" src="assets/varshitha.jpg" alt="Photo of Varshitha">
+        </figure>
       </section>
 
       <!-- Highlights / cards -->
@@ -66,7 +74,7 @@
     </main>
 
     <footer class="bar foot">
-      <div class="wrap">© <span id="year"></span> Your Name</div>
+      <div class="wrap">© <span id="year"></span> Varshitha</div>
     </footer>
   </div>
 
