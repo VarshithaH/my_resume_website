@@ -1,0 +1,169 @@
+/* ========== Pastel Cards Theme (Centered + Larger) ========== */
+:root{
+  --bg:#fffdfc; 
+  --ink:#1b1b1f; 
+  --muted:#5b5e6a; 
+  --line:#ece7ff;
+  --c1:#ffe8f1; /* pink */
+  --c2:#e8f7ff; /* blue */
+  --c3:#e9ffe8; /* green */
+  --chip:#f4f6ff;
+  --btn:#2b6cb0; /* button blue */
+}
+
+/* Make the page full-height and keep footer at bottom */
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Nunito, system-ui, Segoe UI, Arial, sans-serif;
+  font-size: 18px;              /* bigger text */
+  line-height: 1.7;             /* nicer reading */
+  scrollbar-gutter: stable both-edges;
+}
+
+/* --- PAGE LAYOUT --- */
+.page {
+  min-height: 100vh;            /* full viewport height */
+  display: flex;
+  flex-direction: column;       /* header, main (flex:1), footer */
+}
+
+/* Center the content vertically on the page */
+main {
+  flex: 1;                      /* pushes footer to bottom when short */
+  display: flex;                /* enable centering */
+  flex-direction: column;
+  justify-content: center;      /* vertical center */
+  padding: 32px 0;              /* breathing space */
+}
+
+.wrap{ width: min(1200px, 94%); margin: 0 auto; }  /* a bit wider */
+
+/* Headings a bit larger */
+h1 { font-size: clamp(1.8rem, 2.5vw, 2.4rem); margin: 0 0 8px; }
+h2 { font-size: clamp(1.2rem, 1.6vw, 1.5rem); margin: 0 0 10px; }
+
+/* Header / Footer bar */
+.bar{
+  background:#ffffffd9;
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  height: 80px;
+  font-size: 30px;
+  text-align: center;
+}
+.bar .wrap{
+  display:flex; gap:12px; align-items:center; padding:14px 0;
+}
+.title{ font-weight:800; }
+nav{ margin-left:auto; display:flex; gap:12px; }
+nav a{
+  text-decoration:none; color:var(--muted);
+  padding:6px 10px; border-radius:10px;
+  font-size: 0.95rem;
+}
+nav a.active,nav a:hover{ background:#f1f3ff; }
+.foot{ border-top:1px solid var(--line); }
+
+/* Intro (gradient banner) */
+.intro{
+  margin: 28px 0;
+  padding: 28px;                         /* larger */
+  border-radius: 18px;
+  background: linear-gradient(90deg,var(--c1),var(--c2));
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 26px #3b3b8814;
+}
+.intro.alt{
+  background: linear-gradient(90deg,var(--c2),var(--c3));
+}
+
+/* Cards layout */
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;                             /* larger gaps */
+  margin: 18px 0;
+}
+.cards{
+  display:grid;
+  gap:22px;
+  margin:18px 0;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+
+.card{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;                         /* larger */
+  box-shadow: 0 12px 28px #3b3b8814;
+}
+
+/* Table + Lists */
+.t{ width:100%; border-collapse:collapse; }
+.t th, .t td{ padding:12px; border-bottom:1px solid var(--line); text-align:left; }
+.t th{ width: 200px; color:var(--muted); }   /* wider label column */
+.list{ margin:.25rem 0 0; padding-left:1rem; }
+.list li{ margin:.4rem 0; }
+
+/* Pills (skills) */
+.pill{ margin:0; padding:0; list-style:none; display:flex; gap:10px; flex-wrap:wrap; }
+.pill li{
+  background: var(--chip);
+  border: 1px solid #dfe6ff;
+  padding: 8px 12px;                      /* slightly larger pill */
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.actions{ display:flex; gap:12px; margin-top:14px; }
+.btn{
+  background: var(--btn); color:#fff; border:none;
+  padding: 12px 16px;                     /* larger button */
+  border-radius: 10px; font-weight:700; cursor:pointer;
+  text-decoration:none; display:inline-block;
+  font-size: 1rem;
+}
+.btn:hover{ filter:brightness(1.05); }
+.btn.outline{ background:transparent; color:#1f3d68; border:1px solid #a3c3ff; }
+
+/* Footer spacing */
+.foot .wrap{ padding:16px 0; color:var(--muted); text-align:left; }
+
+/* Print helper: nicer PDF from Resume */
+@media print{
+  .bar, .foot, .intro { display: none !important; }
+  .cards{ grid-template-columns:1fr 1fr; }
+  .card{ box-shadow:none; }
+  body{ background:#fff; color:#000; font-size: 12pt; }
+}
+/* Single-column cards on resume (desktop too) */
+.cards.onecol { grid-template-columns: 1fr !important; }
+
+/* --- Home hero tweaks --- */
+.hero-home h1 { margin: 0 0 6px; }
+.brand-accent { color: #2563eb; } /* blue accent text */
+.hero-cta { text-align: left; }
+
+/* --- 3-column grid for Home cards (falls back to 1 on mobile) --- */
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+
+/* --- Simple form styles (Contact) --- */
+.form { display: grid; gap: 14px; }
+.form-row { display: grid; gap: 6px; }
+.form label { font-weight: 700; color: var(--muted); }
+.form input, .form textarea {
+  font: inherit; color: var(--ink); background: #fff;
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 12px; outline: none;
+}
+.form input:focus, .form textarea:focus {
+  border-color: #a3c3ff; box-shadow: 0 0 0 3px #e5efff;
+}
