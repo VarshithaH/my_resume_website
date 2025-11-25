@@ -167,3 +167,29 @@ nav a.active,nav a:hover{ background:#f1f3ff; }
 .form input:focus, .form textarea:focus {
   border-color: #a3c3ff; box-shadow: 0 0 0 3px #e5efff;
 }
+
+/* Photo beside hero heading */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 24px;
+}
+.hero-photo {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px #00000012;
+  display: block;
+  margin-inline: auto; /* center image in its column */
+}
+.hero-figure { margin: 0; }
+
+/* Stack on mobile */
+@media (max-width: 900px) {
+  .hero-split { grid-template-columns: 1fr; text-align: left; }
+  .hero-photo { width: 180px; height: 180px; }
+}
+
