@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home — Varshitha</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="page">
+    <!-- Same header style -->
+    <header class="bar">
+      <div class="wrap">
+        <div class="title">Varshitha</div>
+        <nav>
+          <a class="active" href="index.html">Home</a>
+          <a href="biodata.html">Bio-Data</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Hero banner using your pastel gradient -->
+      <section class="intro hero-home">
+        <h1>Hi, I'm <span class="brand-accent">Varshitha</span></h1>
+        <p>Frontend-focused developer who loves clean UI and simple, responsive web pages.</p>
+        <div class="actions">
+          <a class="btn" href="resume.html">View Resume</a>
+          <a class="btn outline" href="index.html">See Bio-Data</a>
+        </div>
+      </section>
+
+      <!-- Highlights / cards -->
+      <section class="cards grid-3">
+        <div class="card">
+          <h2>About Me</h2>
+          <p class="muted">CSE student with strong fundamentals in HTML, CSS & JavaScript. I build neat, readable code.</p>
+        </div>
+        <div class="card">
+          <h2>Skills</h2>
+          <ul class="pill">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li><li>Python</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Projects</h2>
+          <ul class="list">
+            <li>Portfolio Website</li>
+            <li>Blood Donation Website</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CTA strip -->
+      <section class="intro alt hero-cta">
+        <h2>Want to know more?</h2>
+        <p class="muted">Check out my resume for education, experience and achievements.</p>
+        <div class="actions">
+          <a class="btn" href="resume.html">Open Resume</a>
+          <a class="btn outline" href="contact.html">Contact Me</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bar foot">
+      <div class="wrap">© <span id="year"></span> Your Name</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
