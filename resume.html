@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Your Name</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="page">
+
+  <!-- SAME HEADER as index.html -->
+  <header class="bar">
+    <div class="wrap">
+      <div class="title">Varshitha</div>
+      <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="biodata.html">Bio-Data</a>
+        <a class="active" href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="intro alt">
+      <h1>Resume</h1>
+      <p>Professional summary, education, projects, skills & experience of Varshitha</p>
+    </section>
+
+    <!-- Make the cards container single-column on ALL screens -->
+    <section class="cards onecol">
+
+      <div class="card">
+        <h2>Career Objective</h2>
+        <p>To secure a responsible position where I can apply my technical skills and grow as a developer.</p>
+      </div>
+
+      <div class="card">
+        <h2>Profile Summary</h2>
+        <p class="muted">
+          Motivated Computer Science student with good knowledge of front-end development.<br>
+          I enjoy building clean, responsive interfaces using HTML, CSS and JavaScript.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+        <ul class="list">
+          <li><strong>B.Tech in CSE</strong> — Jawaharlal Nehru New College of Engineering (2023–2027)<br>CGPA: 9.28</li>
+          <li><strong>Pre-University Course (PUC)</strong> — SAI PU College (2021–2022)<br>Percentage: 95.5%</li>
+          <li><strong>SSLC</strong> — National Public School (2020)<br>Percentage: 92%</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Skills</h2>
+        <ul class="pill">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>Java</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Tools & Technologies</h2>
+        <ul class="pill">
+          <li>VS Code</li><li>NetBeans</li><li>Xamp</li>
+          <li>MySQL</li><li>Eclipse</li><li>VMware</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Projects</h2>
+        <ul class="list">
+          <li>
+            <strong>Portfolio Website</strong> — A clean multi-page website (Bio-Data + Resume) using HTML, CSS & JS with jQuery animations.
+          </li>
+          <li>
+            <strong>Blood Donation Portal Website</strong> — Donors regiter to donate blood and receivers can search for required blood anytime anywhere.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Experience</h2>
+        <ul class="list">
+          <li>
+            Workshop attended at IISC Bangalore on 15th and 16th of November 2025 on "AIML using Data Science".
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Certifications</h2>
+        <ul class="list">
+           <li>
+            NPTEL Courses:<br>
+            1. Programming in Java<br>
+            2. The Joy of Computing using Python
+          </li>
+          <li>Innovant IT Solutions:<br>
+            1. C Language<br>
+            2. Full Stack Development
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Achievements</h2>
+        <ul class="list">
+          <li>District Level Gold Medalist in Swimming.</li>
+          <li>Have participated in a famous tv show Suvarna Super Star (Kannada)</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn outline" href="index.html">← Back to Bio-Data</a>
+          <button id="printBtn" class="btn">Print / Save PDF</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="bar foot">
+    <div class="wrap">© <span id="year"></span>Varshitha</div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
